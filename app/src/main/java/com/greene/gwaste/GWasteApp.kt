@@ -1,9 +1,15 @@
 package com.greene.gwaste
 
 import androidx.compose.runtime.Composable
-import com.greene.gwaste.getStarted.GetStartedScreen
+import androidx.navigation.compose.rememberNavController
+import com.greene.gwaste.getStarted.presentation.getStartedRoute
+import com.greene.gwaste.navigation.GWasteNavHost
 
 @Composable
 fun GWasteApp() {
-    GetStartedScreen()
+    val navController = rememberNavController()
+    GWasteNavHost(
+        navController = navController,
+        startDestination = getStartedRoute
+    )
 }
