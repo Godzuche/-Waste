@@ -10,6 +10,6 @@ fun GWasteApp() {
     val navController = rememberNavController()
     GWasteNavHost(
         navController = navController,
-        startDestination = getStartedRoute
+        startDestination = getStartedRoute,
     )
 }
